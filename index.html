@@ -4,67 +4,89 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quiz &hearts;</title>
+  <link rel="stylesheet" href="stylr.css">
+  <script deref src="quiz.js"></script>
 </head>
 <body>
-  <header>&hearts;&hearts;Who's Your "Harry Potter" Boyfriend?&hearts;&hearts;</header>
-  <form action="" class="quiz">
 
- <fieldset>
+  <form class="questions">
+ <header>&hearts;&hearts;&hearts;Who's Your "Harry Potter" Boyfriend?&hearts;&hearts;&hearts;</header>
+
+ <fieldset class="question">
 <legend>Which word best describe you?</legend>
-<input type="radio" name="radiobutton0" id="radio-brave">Brave
-<input type="radio" name="radiobutton0" id="radio-smart">Smart
-<input type="radio" name="radiobutton0" id="radio-kind">Kind
-<input type="radio" name="radiobutton0" id="radio-cunning">Cunning
+<label>
+  <input type="radio" name="question1" id="radio-brave" value="6">Brave
+</label>
+<label>
+  <input type="radio" name="question1" id="radio-smart" value="2">Smart
+</label>
+<label>
+  <input type="radio" name="question1" id="radio-kind" value="0">Kind
+</label>
+<label>
+  <input type="radio" name="question1" id="radio-cunning" value="4">Cunning
+</label>
 </fieldset>
 
 
- <fieldset>
+ <fieldset class="question">
 <legend>What's Your Hosward House?</legend>
-<input type="radio" name="radiobutton1" id="radio-Hufflepuff">Hufflepuff
-<input type="radio" name="radiobutton1" id="radio-Ravenclaw">Ravenclaw
-<input type="radio" name="radiobutton1" id="radio-Slytherin">Slytherin
-<input type="radio" name="radiobutton1" id="radio-Gryffindor">Gryffindor
+<label> 
+  <input type="radio" name="question2" id="radio-Hufflepuff" value="0">Hufflepuff
+</label>
+<label> 
+  <input type="radio" name="question2" id="radio-Ravenclaw" value="2">Ravenclaw
+</label>
+<label> 
+  <input type="radio" name="question2" id="radio-Slytherin" value="4">Slytherin
+</label>
+<label>
+  <input type="radio" name="question2" id="radio-Gryffindor" value="6">Gryffindor
+ </label>
 </fieldset>
 
-<fieldset>
+<fieldset class="question">
 <legend>Which Subject Is Your Favorite?</legend>
-<input type="radio" name="radiobutton2" id="radio-bfc">Broom Flight Class
-<input type="radio" name="radiobutton2" id="radio-darkart">Defense Against The Dark Art
-<input type="radio" name="radiobutton2" id="radio-potions">Potions
-<input type="radio" name="radiobutton2" id="radio-creature">Care of Magical Creature
+<label>
+  <input type="radio" name="question3" id="radio-bfc" value="6">Broom Flight Class
+</label>
+<label>
+  <input type="radio" name="question3" id="radio-darkart" value="4">Defense Against The Dark Art
+</label>
+<label>
+  <input type="radio" name="question3" id="radio-potions" value="2">Potions
+</label>
+<label>
+  <input type="radio" name="question3" id="radio-creature" value="0">Care of Magical Creature
+</label>
 </fieldset>
 
-<fieldset>
+<fieldset class="question">
 <legend>Who's Your Favorite Proffesor?</legend>
-<input type="radio" name="radiobutton3" id="radio-dumb">Dumbledor
-<input type="radio" name="radiobutton3" id="radio-sprout">Proffesor Sprout
-<input type="radio" name="radiobutton3" id="radio-snape">Proffesor Snape
-<input type="radio" name="radiobutton3" id="radio-mc">Proffesor McGonall
+<label>
+  <input type="radio" name="question4" id="radio-dumb" value="2">Filius Flitwick
+</label>
+<label>
+  <input type="radio" name="question4" id="radio-sprout" value="0">Proffesor Sprout
+</label>
+<label>
+  <input type="radio" name="question4" id="radio-snape" value="4">Proffesor Snape
+</label>
+<label>
+  <input type="radio" name="question4" id="radio-mc" value="6">Proffesor McGonall
+</label>
 </fieldset>
 
-<fieldset>
-<legend>Pick a BFF</legend>
-<input type="radio" name="radiobutton4" id="radio-cho">Cho Chang
-<input type="radio" name="radiobutton4" id="radio-ginny">Ginny Weasley
-<input type="radio" name="radiobutton4" id="radio-pansy">Pansy Parkinson
-<input type="radio" name="radiobutton4" id="radio-herimone">Herimone Granger
-</fieldset>
-
-<fieldset>
-<legend>And Lastly, What Do You Look For In A Romantic Parter?</legend>
-<input type="radio" name="radiobutton5" id="radio-courage">Courage
-<input type="radio" name="radiobutton5" id="radio-wisdom">Wisdom
-<input type="radio" name="radiobutton5" id="radio-kindness">Kindness
-<input type="radio" name="radiobutton5" id="radio-loyalty">Loyalty
-</fieldset>
-
-<fieldset>
-<legend>Are You Ready To See Your Harry Potter Boyfriend?</legend>
-<button>YES!!!!&hearts;</button>
-</fieldset>
-
+<button onclick="submitQuiz()"> &hearts;Calculate&hearts;</button>
 </form>
-<footer>&hearts;Share This Article&hearts;
+
+
+<div class="result invisible">
+  <h2>Din Harry Potter Boyfriend är <span class="calculate">0</span>&hearts; </h2>
+  <button type="button" onclick="resetQuiz()">igen?</button>
+</div>
+
+<footer>&hearts;&hearts;Share This Article&hearts;&hearts;
   <ul class="social-link">
     <li class="nav-item" >
       <a href="https://facebook.com/">Facebook</a>

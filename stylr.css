@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+fieldset,
+header {
+  margin-bottom: 1rem;
+}
+
+.display {
+  display: none;
+}
